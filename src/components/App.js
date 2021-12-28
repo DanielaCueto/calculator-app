@@ -1,11 +1,13 @@
 import { useState } from "react";
 import "../styles/App.scss";
+import ThemeChooser from "./ThemeChooser";
 
 function App() {
   const [number, setNumber] = useState("0");
   const [previousNumber, setPreviousNumber] = useState('0')
   const [operation, setOperation] = useState ("")
   const [firstDigit, setFirstDigit] = useState(true)
+  const [chosenTheme, setChosenTheme] = useState("1")
   console.log(number, previousNumber, operation);
   
   
@@ -70,17 +72,13 @@ function App() {
   }
 
   
-
+ // cuando tengo que usar una expresión de js en medio de JSX --> entre {} ... si es una cadena donde meter una variable--> interpolar con las ``
   return (
-    <div className="App">
-      <header className="header">
+    <div className={`App App--theme${chosenTheme}`}>
+      <header className="App__header">
         <h1>Calc</h1>
-        <h2>THEME</h2>
-
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <input type="checkbox" />
+        <ThemeChooser onChange={setChosenTheme} themeId={chosenTheme}>
+        </ThemeChooser>
       </header>
       <section>
         <input type="text" name="name" value={number} readOnly />

@@ -1,13 +1,14 @@
-.themeChooser{
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+.themeChooser {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
 
-    &__option{
-        display: flex;
-        flex-direction: column;
-        padding: 0 10px;
-
-    }
+  &__option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 0 10px;
+  }
 }

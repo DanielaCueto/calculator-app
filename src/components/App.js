@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/App.scss";
 import ThemeChooser from "./ThemeChooser";
+import KeyBoard from "./KeyBoard";
 
 function App() {
   const [number, setNumber] = useState("0");
@@ -83,35 +84,7 @@ function App() {
       <section>
         <input type="text" name="name" value={number} readOnly />
       </section>
-      <section>
-        <button onClick={handleNumber}>7</button>
-        <button onClick={handleNumber}>8</button>
-        <button onClick={handleNumber}>9</button>
-        <button onClick={handleDelete}>DEL</button>
-      </section>
-      <section>
-        <button onClick={handleNumber}>4</button>
-        <button onClick={handleNumber}>5</button>
-        <button onClick={handleNumber}>6</button>
-        <button onClick={handleOperation}>+</button>
-      </section>
-      <section>
-        <button onClick={handleNumber}>1</button>
-        <button onClick={handleNumber}>2</button>
-        <button onClick={handleNumber}>3</button>
-        <button onClick={handleOperation}>-</button>
-        
-      </section>
-      <section>
-        <button onClick={handleNumber} >.</button>
-        <button onClick={handleNumber}>0</button>
-        <button onClick={handleOperation} >/</button>
-        <button onClick={handleOperation}>x</button>
-      </section>
-      <section>
-        <button onClick={handleReset}>RESET</button>
-        <button onClick={handleResult}>=</button>
-      </section>
+      <KeyBoard handleNumber={handleNumber} handleDelete={handleDelete} handleOperation={handleOperation} handleReset={handleReset} handleResult={handleResult}></KeyBoard>
     </div>
   );
 }

@@ -1,5 +1,11 @@
 .keyboard {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    width: 375px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 5;
+    &__key{
+        font-size: 32px;
+    }
+    
 }

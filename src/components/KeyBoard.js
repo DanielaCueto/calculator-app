@@ -2,11 +2,11 @@ import "../styles/KeyBoard.scss"
 
 function KeyBoard (props) {
     return (
-<section className="keyboard" >
+<section className={`keyboard keyboard--theme${props.themeId}`} >
 <button onClick={props.handleNumber} className="keyboard__key">7</button>
 <button onClick={props.handleNumber} className="keyboard__key">8</button>
 <button onClick={props.handleNumber} className="keyboard__key">9</button>
-<button onClick={props.handleDelete} className="keyboard__key">DEL</button>
+<button onClick={props.handleDelete} className="keyboard__key keyboard__key--delete">DEL</button>
 <button onClick={props.handleNumber} className="keyboard__key">4</button>
 <button onClick={props.handleNumber} className="keyboard__key">5</button>
 <button onClick={props.handleNumber} className="keyboard__key">6</button>
@@ -19,8 +19,8 @@ function KeyBoard (props) {
 <button onClick={props.handleNumber} className="keyboard__key">0</button>
 <button onClick={props.handleOperation} className="keyboard__key">/</button>
 <button onClick={props.handleOperation} className="keyboard__key">x</button>
-<button onClick={props.handleReset} className="keyboard__key">RESET</button>
-<button onClick={props.handleResult} className="keyboard__key">=</button>
+<button onClick={props.handleReset} className=" keyboard__key keyboard__key--reset">RESET</button>
+<button onClick={props.handleResult} className="keyboard__key keyboard__key--equal">=</button>
 </section>) }
 
 export default KeyBoard; 

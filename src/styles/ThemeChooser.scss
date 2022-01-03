@@ -3,12 +3,88 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-
-  &__option {
+  &__title {
+    margin-right: 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+  &__toggle {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    width: 70px;
+  }
+  &__labels,
+  &__inputs {
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    align-content: center;
-    padding: 0 10px;
+    padding: 4px;
+  }
+  &__label {
+    width: 15px;
+    text-align: center;
+  }
+  &__inputs {
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 15px;
+    height: 30px;
+  }
+  &__input {
+    &:after {
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      top: -2px;
+      left: -1px;
+      position: relative;
+      background-color: hsl(223, 31%, 20%);
+      content: "";
+      display: inline-block;
+      visibility: visible;
+    }
+
+    &:checked:after {
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      top: -2px;
+      left: -1px;
+      position: relative;
+      background-color: hsl(6, 63%, 50%);
+      content: "";
+      display: inline-block;
+      visibility: visible;
+    }
+  }
+
+  &--theme2 {
+    .themeChooser__inputs {
+      background-color: hsl(0, 5%, 81%);
+    }
+    .themeChooser__input {
+      &:after {
+        background-color: hsl(0, 5%, 81%);
+      }
+      &:checked:after{
+        background-color: hsl(25, 98%, 40%)
+      }
+    }
+  }
+
+  &--theme3 {
+    .themeChooser__inputs {
+      background-color: hsl(268, 71%, 12%);
+    }
+    .themeChooser__input {
+      &:after {
+        background-color: hsl(268, 71%, 12%)
+        ;
+      }
+      &:checked:after{
+        background-color: hsl(176, 100%, 44%)
+      }
+    }
   }
 }

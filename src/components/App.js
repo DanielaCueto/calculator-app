@@ -76,15 +76,16 @@ function App() {
  // cuando tengo que usar una expresión de js en medio de JSX --> entre {} ... si es una cadena donde meter una variable--> interpolar con las ``
   return (
     <div className={`App App--theme${chosenTheme}`}>
+      <div className="App__wrapper">
       <header className="App__header">
-        <h1>Calc</h1>
+        <h1>calc</h1>
         <ThemeChooser onChange={setChosenTheme} themeId={chosenTheme}>
         </ThemeChooser>
       </header>
-      <section>
-        <input type="text" name="name" value={number} readOnly />
-      </section>
-      <KeyBoard handleNumber={handleNumber} handleDelete={handleDelete} handleOperation={handleOperation} handleReset={handleReset} handleResult={handleResult}></KeyBoard>
+      <input type="text" name="name" value={number} readOnly  className="App__display"/>
+      
+      <KeyBoard handleNumber={handleNumber} handleDelete={handleDelete} handleOperation={handleOperation} handleReset={handleReset} handleResult={handleResult} themeId={chosenTheme}></KeyBoard>
+    </div>
     </div>
   );
 }

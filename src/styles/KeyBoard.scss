@@ -18,6 +18,11 @@
     &:hover {
       opacity: 0.8;
     }
+    &--clicked{
+      filter: brightness(50%);
+      
+      
+    }
     &--reset {
       grid-column: 1 / span 2;
       background-color: hsl(225, 21%, 49%);

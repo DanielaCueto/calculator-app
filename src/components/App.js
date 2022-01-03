@@ -84,7 +84,7 @@ function App() {
       </header>
       <input type="text" name="name" value={number} readOnly  className="App__display"/>
       
-      <KeyBoard handleNumber={handleNumber} handleDelete={handleDelete} handleOperation={handleOperation} handleReset={handleReset} handleResult={handleResult} themeId={chosenTheme}></KeyBoard>
+      <KeyBoard handleNumber={handleNumber} handleDelete={handleDelete} handleOperation={handleOperation} handleReset={handleReset} handleResult={handleResult} themeId={chosenTheme} operation={operation}></KeyBoard>
     </div>
     </div>
   );

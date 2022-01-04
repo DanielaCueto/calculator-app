@@ -1,5 +1,5 @@
 ### Calculator-app
-As a new challenge, I created a Calculator app and add  themes to people can choose whichever theme their want! 
+As a new challenge, I created a Calculator app with React and added  themes so people can choose whichever theme they want! 
 
 ### `npm start`
 

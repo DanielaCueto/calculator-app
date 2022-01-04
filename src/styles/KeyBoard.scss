@@ -4,10 +4,10 @@
   display: grid;
   padding: 20px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 60px);
+  grid-template-rows: repeat(5, 50px);
   gap: 20px;
   &__key {
-    min-width: 60px;
+    min-width: 50px;
     font-size: 32px;
     background-color: hsl(30, 25%, 89%);
     border: none;

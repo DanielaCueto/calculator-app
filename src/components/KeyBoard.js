@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import "../styles/KeyBoard.scss"
 
 function KeyBoard (props) {
@@ -22,5 +23,17 @@ function KeyBoard (props) {
 <button onClick={props.handleReset} className=" keyboard__key keyboard__key--reset">RESET</button>
 <button onClick={props.handleResult} className="keyboard__key keyboard__key--equal">=</button>
 </section>) }
+
+KeyBoard.propTypes = {
+    themeId: propTypes.string.isRequired,
+    handleNumber: propTypes.func.isRequired,
+    handleDelete: propTypes.func.isRequired,
+    handleOperation: propTypes.func.isRequired,
+    handleReset: propTypes.func.isRequired,
+    handleResult: propTypes.func.isRequired,
+    operation: propTypes.string.isRequired,
+
+}
+
 
 export default KeyBoard; 

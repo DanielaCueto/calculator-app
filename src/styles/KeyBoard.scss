@@ -44,4 +44,39 @@
       box-shadow: 0px 5px 0px 0px hsl(224, 28%, 35%);
     }
   }
+
+
+  &--theme2{
+      background-color: hsl(0, 5%, 81%);
+  .keyboard__key{
+    background-color:hsl(45, 7%, 89%) ;
+    box-shadow: 0px 5px 0px 0px hsl(35, 11%, 61%);
+    &--delete, &--reset{
+      background-color: hsl(185, 42%, 37%);
+      box-shadow: 0px 5px 0px 0px hsl(185, 58%, 25%);
+    }
+    &--equal{
+      background-color: hsl(25, 98%, 40%);
+      box-shadow: 0px 5px 0px 0px hsl(25, 99%, 27%);
+      color: hsl(0, 0, 100%)
+    }
+  }
+  }
+
+  &--theme3{
+    background-color:hsl(268, 71%, 12%) ;
+    .keyboard__key{
+      background-color: hsl(281, 89%, 26%);
+      box-shadow: 0px 5px 0px 0px hsl(285, 91%, 52%);
+      color: hsl(52, 100%, 62%);
+      &--delete, &--reset{
+        color: hsl(0, 0%, 100%); 
+      }
+      &--equal{
+        background-color: hsl(176, 100%, 44%);
+        box-shadow: 0px 5px 0px 0px hsl(177, 92%, 70%);
+        color: hsl(198, 20%, 13%)
+      }
+    }
+  }
 }

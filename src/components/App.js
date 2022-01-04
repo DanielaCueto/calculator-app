@@ -82,7 +82,7 @@ function App() {
         <ThemeChooser onChange={setChosenTheme} themeId={chosenTheme}>
         </ThemeChooser>
       </header>
-      <input type="text" name="name" value={number} readOnly  className="App__display"/>
+      <div className="App__display">{number}</div>
       
       <KeyBoard handleNumber={handleNumber} handleDelete={handleDelete} handleOperation={handleOperation} handleReset={handleReset} handleResult={handleResult} themeId={chosenTheme} operation={operation}></KeyBoard>
     </div>
